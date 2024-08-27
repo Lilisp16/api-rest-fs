@@ -1,0 +1,22 @@
+{
+  "name": "api-fs",
+  "version": "v1.22.22",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Lili Sanchez",
+  "license": "ISC",
+  "description": "api rest para proyecto",
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "yarn": "^1.22.22"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.5.3"
+  }
+}
