@@ -13,12 +13,12 @@ app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });*/
 
-
-const port = 3000;
+const port = process.env.PORT || 3000;
+//const port = 3000;
 const app = require("./app");
 const mongoose = require("mongoose");
 //require('dotenv').config();
-const urlMongoDb = "mongodb+srv://admin:0761163@cluster0.rkwsje2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const urlMongoDb = process.env.urlMongoDb || "mongodb+srv://admin:0761163@cluster0.rkwsje2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 
 mongoose.connect(urlMongoDb, {
