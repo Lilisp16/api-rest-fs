@@ -1,4 +1,4 @@
-const port = process.env.PORT || 3000;
+/*const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const app = require('./app');
 
@@ -11,20 +11,19 @@ mongoose.connect(mongoURI)
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
-});
+});*/
 
 
-
-/*const port = 3000;
+const port = 3000;
 const app = require("./app");
 const mongoose = require("mongoose");
-require('dotenv').config();
-//const urlMongoDb = "mongodb+srv://admin:0761163@cluster0.rkwsje2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+//require('dotenv').config();
+const urlMongoDb = "mongodb+srv://admin:0761163@cluster0.rkwsje2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 
 mongoose.connect(urlMongoDb, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+   // useNewUrlParser: true,
+   // useUnifiedTopology: true,
   })
   .then(() => {
     console.log("La conexión a la base de datos es correcta");
@@ -35,7 +34,7 @@ mongoose.connect(urlMongoDb, {
   })
   .catch((error) => {
     console.error("Error de conexión:", error);
-  }); */
+  }); 
 
 
 

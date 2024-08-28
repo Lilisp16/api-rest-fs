@@ -100,8 +100,20 @@ async function updateIncident(req, res){
     const idIncident = params.id;
 
     try {
-        const incident = await Incident.findByIdAndUpdate(idIncident);
+        const incident = await Incident.findByIdAndUpdate(
+            idIncident,
+            {
+                title: params.title,
+                description: params.description,
+                user: params.user,
+                severity: params.severity,
+                completed: params.completed,
+                // Cualquier otro campo que desees actualizar
+            },
+            { new: true } // Esta opción devuelve el documento actualizado.
+        );
 
+        
         if (!incident){
             res.status(400).send({msg: "No se ha podido actualizar la incidencia"});
         }
